@@ -22,15 +22,15 @@ install: venv
 	$(VENV)/bin/pip install --upgrade pip -r  $(REQUIREMENTS)
 
 # Run unit tests
-test: install
+test:
 	$(VENV)/bin/pytest $(TEST_DIR)
 
 # Format code with Black
-format: install
+format:
 	$(VENV)/bin/black $(SRC_DIR)
 
 # Lint code with Flake8
-lint: install
+lint:
 	$(VENV)/bin/pylint $(SRC_DIR)
 
 # Clean up generated files and virtual environment
